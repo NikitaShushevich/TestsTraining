@@ -10,8 +10,14 @@ public class BookStorePageElements {
         this.driver = driver;
     }
 
-    public WebElement clickOnFirstBook(){
+    public WebElement firstBook(){
         return driver.findElement(By.xpath("//span[@id='see-book-Git Pocket Guide']"));
+    }
+    public WebElement secondBook(){
+        return driver.findElement(By.xpath("//span[@id='see-book-Learning JavaScript Design Patterns']"));
+    }
+    public WebElement searchBar(){
+        return driver.findElement(By.xpath("//input[@id='searchBox']"));
     }
 
 }
