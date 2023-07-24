@@ -20,4 +20,8 @@ public class BookStorePageElements {
         return driver.findElement(By.xpath("//input[@id='searchBox']"));
     }
 
+    public WebElement loginBtn(){
+        return driver.findElement(By.xpath("//button[@id='login']"));
+    }
+
 }
