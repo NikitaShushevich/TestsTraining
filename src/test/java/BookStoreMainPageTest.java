@@ -22,7 +22,7 @@ public class BookStoreMainPageTest extends TestInit{
         goToBookStore();
         bookStorePageElements.searchBar().sendKeys("Git pocket");
         bookStorePageElements.firstBook().click();
-
+        Assert.assertEquals(bookStorePageElements.findTitleText().getText(), "Git Pocket Guide");
     }
 
     @Test
