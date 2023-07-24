@@ -27,4 +27,8 @@ public class BookStorePageElements {
     public WebElement findTitleText(){
         return driver.findElement(By.xpath("//div[@id='title-wrapper']//label[@id='userName-value']"));
     }
+
+    public WebElement userForm(){
+        return driver.findElement(By.xpath("//form[@id='userForm']"));
+    }
 }
