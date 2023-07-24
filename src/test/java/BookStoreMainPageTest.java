@@ -8,12 +8,14 @@ public class BookStoreMainPageTest extends TestInit{
         BookStorePageElements bookStorePageElements = new BookStorePageElements(driver);
         goToBookStore();
         bookStorePageElements.firstBook().click();
+        Assert.assertEquals(bookStorePageElements.findTitleText().getText(), "Git Pocket Guide");
     }
     @Test
     public void clickOnSecondBook(){
         BookStorePageElements bookStorePageElements = new BookStorePageElements(driver);
         goToBookStore();
         bookStorePageElements.secondBook().click();
+        Assert.assertEquals(bookStorePageElements.findTitleText().getText(), "Learning JavaScript Design Patterns");
     }
 
     @Test
@@ -26,9 +28,10 @@ public class BookStoreMainPageTest extends TestInit{
     }
 
     @Test
-    public void clickOnLoginBtn(){
-    BookStorePageElements bookStorePageElements = new BookStorePageElements(driver);
-    goToBookStore();
-    bookStorePageElements.loginBtn().click();
+    public void clickOnLoginBtn() {
+        BookStorePageElements bookStorePageElements = new BookStorePageElements(driver);
+        goToBookStore();
+        bookStorePageElements.loginBtn().click();
+        Assert.assertTrue(bookStorePageElements.userForm().isDisplayed());
     }
 }
