@@ -24,4 +24,7 @@ public class BookStorePageElements {
         return driver.findElement(By.xpath("//button[@id='login']"));
     }
 
+    public WebElement findTitleText(){
+        return driver.findElement(By.xpath("//div[@id='title-wrapper']//label[@id='userName-value']"));
+    }
 }
