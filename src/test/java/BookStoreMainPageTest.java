@@ -24,4 +24,11 @@ public class BookStoreMainPageTest extends TestInit{
         bookStorePageElements.firstBook().click();
 
     }
+
+    @Test
+    public void clickOnLoginBtn(){
+    BookStorePageElements bookStorePageElements = new BookStorePageElements(driver);
+    goToBookStore();
+    bookStorePageElements.loginBtn().click();
+    }
 }
