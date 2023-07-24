@@ -22,7 +22,7 @@ public class LoginPageElements {
     public WebElement loginBtn(){
         return driver.findElement(By.xpath("//button[@id='login']"));
     }
-    public WebElement newuserbtn(){
+    public WebElement newUserBtn(){
         return driver.findElement(By.xpath("//button[@id='newUser']"));
     }
 }
