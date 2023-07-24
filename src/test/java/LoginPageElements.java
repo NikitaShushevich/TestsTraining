@@ -7,7 +7,7 @@ public class LoginPageElements {
     WebDriver driver;
 
     public LoginPageElements(WebDriver driver){
-        this.driver = driver;
+        this.driver= driver;
     }
     public WebElement welcomeText(){
         return driver.findElement(By.xpath("//form[@id='userForm']//h2"));

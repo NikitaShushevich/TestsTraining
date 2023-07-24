@@ -12,7 +12,7 @@ public class TestInit {
 
     @BeforeMethod
     public void setup(){
-        WebDriverManager.chromedriver().setup();;
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
     }
     @AfterMethod
@@ -20,7 +20,7 @@ public class TestInit {
         driver.quit();
     }
 
-    public void goToDemoQa(){driver.get("http://www.demoqa.com");}
+    //public void goToDemoQa(){driver.get("http://www.demoqa.com");}
     public void goToBookStore(){driver.get("https://demoqa.com/books");}
     public void goToLoginPage(){driver.get("https://demoqa.com/login");}
 }
