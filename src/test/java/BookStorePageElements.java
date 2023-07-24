@@ -31,4 +31,8 @@ public class BookStorePageElements {
     public WebElement userForm(){
         return driver.findElement(By.xpath("//form[@id='userForm']"));
     }
+
+    public WebElement searchBox(){
+        return driver.findElement(By.xpath("//input[@id='searchBox']"));
+    }
 }

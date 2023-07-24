@@ -28,10 +28,10 @@ public class BookStoreMainPageTest extends TestInit{
     }
 
     @Test
-    public void clickOnLoginBtn(){
-    BookStorePageElements bookStorePageElements = new BookStorePageElements(driver);
-    goToBookStore();
-    bookStorePageElements.loginBtn().click();
-    Assert.assertTrue(bookStorePageElements.userForm().isDisplayed());
+    public void clickOnLoginBtn() {
+        BookStorePageElements bookStorePageElements = new BookStorePageElements(driver);
+        goToBookStore();
+        bookStorePageElements.loginBtn().click();
+        Assert.assertTrue(bookStorePageElements.userForm().isDisplayed());
     }
 }
