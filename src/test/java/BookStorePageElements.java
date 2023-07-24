@@ -35,4 +35,7 @@ public class BookStorePageElements {
     public WebElement searchBox(){
         return driver.findElement(By.xpath("//input[@id='searchBox']"));
     }
+    public WebElement emptyTableText(){
+        return driver.findElement(By.xpath("//*[contains(text(), 'No rows found')]"));
+    }
 }
