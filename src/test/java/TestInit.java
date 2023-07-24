@@ -22,4 +22,5 @@ public class TestInit {
 
     public void goToDemoQa(){driver.get("http://www.demoqa.com");}
     public void goToBookStore(){driver.get("https://demoqa.com/books");}
+    public void goToLoginPage(){driver.get("https://demoqa.com/login");}
 }
