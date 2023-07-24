@@ -1,7 +1,14 @@
 package org.example;
 
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Animals animals = new Animals();
+        Puma puma = new Puma();
+        Animals jaba = new Jaba();
+        animals.run();
+        puma.run();
+        jaba.run();
+
     }
 }
