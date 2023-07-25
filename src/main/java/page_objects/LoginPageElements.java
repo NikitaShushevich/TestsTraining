@@ -31,4 +31,12 @@ public class LoginPageElements {
     public WebElement profileText(){
         return driver.findElement(By.xpath("//div[contains(text(), 'Profile')]"));
     }
+
+    public WebElement invalidUserMessege(){
+        return driver.findElement(By.xpath("//p[@id='name']"));
+    }
+
+    public WebElement newUserPageWelcomeText(){
+        return driver.findElement(By.xpath("//div//h4[contains(text(), 'Register to Book Store')]"));
+    }
 }
