@@ -26,13 +26,35 @@ public class LoginPageTest extends TestInit{
         userLogin();
         userPassword();
         loginPageElements.loginBtn().click();
-
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[contains(text(), 'Profile')]")));
-
+        waitForElementToBeActive("//div[contains(text(), 'Profile')]");
         Assert.assertEquals(loginPageElements.profileText().getText(), "Profile");
 
     }
+
+    @Test
+    public void invalidUserLogin(){
+        LoginPageElements loginPageElements = new LoginPageElements(driver);
+        urlForLoginPage();
+        loginPageElements.usernameBox().sendKeys("tdgklj");
+        loginPageElements.passwordBox().sendKeys("sfsdfsdf");
+        loginPageElements.loginBtn().click();
+        waitForElementToBeActive("//p[@id='name']");
+        Assert.assertEquals(loginPageElements.invalidUserMessege().getText(), "Invalid username or password!");
+    }
+
+    @Test
+    public void newUserBtnTest(){
+        LoginPageElements loginPageElements = new LoginPageElements(driver);
+        urlForLoginPage();
+        loginPageElements.newUserBtn().click();
+        waitForElementToBeActive("//div//h4[contains(text(), 'Register to Book Store')]");
+        Assert.assertEquals(loginPageElements.newUserPageWelcomeText().getText(), "Register to Book Store");
+    }
+
+
+
+
+
 
     public void urlForLoginPage(){
         openUrl("https://demoqa.com/login");
@@ -46,5 +68,10 @@ public class LoginPageTest extends TestInit{
     public void userPassword(){
         LoginPageElements loginPageElements = new LoginPageElements(driver);
         loginPageElements.passwordBox().sendKeys("Test1234@");
+    }
+
+    public void waitForElementToBeActive(String locator){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
     }
 }
